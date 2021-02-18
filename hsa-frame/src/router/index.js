@@ -8,6 +8,8 @@ import Layout from '@/layout'
 
 /* Router Modules */
 import QueryListManage from './modules/QueryListManage' // 报表查询模块
+import internet from './modules/internet' // 互联网端
+import synergyPlatform from './modules/synergyPlatform' // 协同平台
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -59,7 +61,9 @@ export const constantRoutes = [
       }
     ]
   },
-  QueryListManage
+  QueryListManage,
+  internet,
+  synergyPlatform
 ]
 /**
  * asyncRoutes
