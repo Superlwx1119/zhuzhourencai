@@ -1,0 +1,153 @@
+$sideBarWidth: 210px;
+
+// 重定义element-UI变量
+$--color-primary:                                #49A1F9;   //主题色
+$--color-success:                                #67c23a;   //成功
+$--color-warning:                                #e6a23c;   //警告
+$--color-danger:                                 #F56C6C;   //危险
+$color-assist:                                   #3CA0F6;   //辅肋色
+$gradual:                                        #3B71E8;   //渐变色
+
+// 字体颜色
+$text-color-title:                               #303133;     //标题
+$text-color-text:                                #606266;     //正文
+$text-color-mark:                                #909399;     //标注
+$text-color-minor:                               #C0C4CC;     //辅助说明
+
+
+// 背景
+$bg:                                             #eeeff0;
+$bg1:                                            #F0F2F5;
+$bg2:                                            #F5F7FA;
+
+// 字体
+$font-family:                                    "Microsoft YaHei","微软雅黑",Arial,sans-serif,"Helvetica Neue","Helvetica","PingFang SC","Hiragino Sans GB";
+
+
+// 基础值
+$white:                                          #fff;
+$radius:                                         3px;
+$error-bg:                                       #FFE1D8;
+$error-text-color:                               #BB809C;
+
+
+
+
+$const:                                          14px;
+$title-height:                                   0;
+$navbar:                                         58px;
+$tags:                                           40px;
+$border:                                         rgba(206,206,206, 1);
+$title:                                          #101010;
+$text:                                           #636363;
+$border:                                         #CECECE;
+$title:                                          #101010;
+
+
+
+
+$color1:                                         $white;
+$color2:                                         #bb829e;
+$color3:                                         $white;
+
+
+// 头部
+$navbar-height:                                  74px;
+$navbar-theme1:                                  $white;
+$navbar-theme2:                                  $white;
+$navbar-theme3:                                  $white;
+$navbar-text-color1:                             $text;
+$navbar-text-color2:                             #bb829e;
+$navbar-text-color3:                             #55b046;
+
+
+// 标签
+$tag-height:                                     48px;
+$tag-theme1:                                     $--color-primary !important;
+$tag-theme2:                                     #f0a0be !important;
+$tag-theme3:                                     #159c77 !important;
+$tags-view-item-bg:                              $color-assist;
+
+
+// 侧边框导航
+$sidebar-theme1:                                 #002140;
+$sidebar-theme2:                                 #f6cadb;
+$sidebar-theme3:                                 #55b046;
+$sidebar-height:                                 50px;
+$sidebar-color:                                  $white;
+$hideSidebar-width:                              54px;
+
+
+// 表单
+$input-focus-color:                              #1B65B9;
+$form-label-right:                               4px;
+$input-height:                                   26px;
+$input-height-mini:                              24px;
+$form-size:                                      14px;
+
+
+$btn-size:                                       14px;
+$btn-small-size:                                 12px;
+
+
+// 表格
+$table-th-padding:                               9px 0;
+$table-td-padding:                               8px 0;
+$table-td-bg:                                    #f9fafe;
+$table-td-hover-bg:                              #DEE9F5;
+$table-td-height:                                40px;
+//table- th - color
+$table-th-color:                                 #101010;
+
+// tabs选项卡
+$tabs-height:                                    30px;
+$tabs-padding:                                   0 24px;
+$tabs-bg:                                        #fcfcf5;
+$tabs-hover-bg:                                  #ffffd9;
+$tabs-size:                                      12px;
+$tabs-color:                                     $title;
+$tabs-hover-color:                               $--color-primary;
+
+
+// 单选
+$radio-label-padding-left:                        8px;
+$radio-radio-margin-left:                         70px;
+$radio-group:                                     20px;
+$radio-default-color:                             #303133;
+$radio-hover-color:                               $--color-primary;
+$radio-disabled:                                  #C0C4CC;
+
+
+// 多选
+$checked-label-padding-left:                      $radio-label-padding-left;
+$checked-checked-margin-left:                     $radio-radio-margin-left;
+$checked-group:                                   $radio-group;
+$checked-default-color:                           $radio-default-color;
+$checked-hover-color:                             $radio-hover-color;
+$checked-disabled:                                $radio-disabled;
+
+
+// 下拉
+$dropdown-selected:                               #1B65B9;
+$dropdown-hover-color:                            #5C91CD;
+$dropdown-hover-bg:                               #DEE9F5;
+
+
+// 底部
+$footer-height:                                    58px;
+
+// $screen1-1:                                        1920px;
+// $screen1-2:                                        1919px;
+// $screen1-3:                                        1200px;
+// $screen1-4:                                        1199px;
+
+ $screen1-1:                                        1710px;
+ $screen1-2:                                        1709px;
+ $screen1-3:                                        990px;
+ $screen1-4:                                        989px;
+
+
+// $screen1-1:                                        1440px;
+// $screen1-2:                                        1439px;
+// $screen1-3:                                        990px;
+// $screen1-4:                                        989px;
