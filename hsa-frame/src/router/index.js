@@ -9,6 +9,9 @@ import Layout from '@/layout'
 /* Router Modules */
 import QueryListManage from './modules/QueryListManage' // 报表查询模块
 import admission from './modules/admission'
+import internet from './modules/internet' // 互联网端
+import synergyPlatform from './modules/synergyPlatform' // 协同平台
+
 /**
  * Note: sub-menu only appear when route children.length >= 1
  * Detail see: https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -60,7 +63,9 @@ export const constantRoutes = [
     ]
   },
   ...admission,
-  QueryListManage
+  QueryListManage,
+  internet,
+  synergyPlatform
 ]
 /**
  * asyncRoutes
