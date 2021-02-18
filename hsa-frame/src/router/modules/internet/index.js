@@ -27,6 +27,24 @@ export default {
       component: () => import('@/views/internet/rewardApply/index'),
       name: 'RewardApply',
       meta: { title: '人才贡献奖励申报', icon: 'spot' }
+    },
+    {
+      path: 'childStudyApply',
+      component: () => import('@/views/internet/childStudyApply/index'),
+      name: 'ChildStudyApply',
+      meta: { title: '子女入学申请', icon: 'spot' }
+    },
+    {
+      path: 'spouseWorkAppky',
+      component: () => import('@/views/internet/spouseWorkAppky/index'),
+      name: 'SpouseWorkAppky',
+      meta: { title: '配偶就业申请', icon: 'spot' }
+    },
+    {
+      path: 'apartmentApply',
+      component: () => import('@/views/internet/apartmentApply/index'),
+      name: 'ApartmentApply',
+      meta: { title: '人才公寓入住申请', icon: 'spot' }
     }
   ]
 }
