@@ -15,6 +15,18 @@ export default {
       component: () => import('@/views/internet/homeSubsidiesApply/index'),
       name: 'HomeSubsidiesApply',
       meta: { title: '人才分类认定及安家补贴申报', icon: 'spot' }
+    },
+    {
+      path: 'houseSubsidiesApply',
+      component: () => import('@/views/internet/houseSubsidiesApply/index'),
+      name: 'HouseSubsidiesApply',
+      meta: { title: '人才购房补贴申报', icon: 'spot' }
+    },
+    {
+      path: 'rewardApply',
+      component: () => import('@/views/internet/rewardApply/index'),
+      name: 'RewardApply',
+      meta: { title: '人才贡献奖励申报', icon: 'spot' }
     }
   ]
 }
