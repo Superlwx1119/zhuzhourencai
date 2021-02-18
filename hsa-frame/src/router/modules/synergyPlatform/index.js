@@ -15,6 +15,20 @@ export default {
       component: () => import('@/views/synergyPlatform/talentClassify'),
       name: 'talentClassify',
       meta: { title: '人才分类认定', icon: 'spot' }
+    },
+    {
+      path: 'evaluationOfMunicipalLeadingTalents',
+      component: () => import('@/views/synergyPlatform/evaluationOfMunicipalLeadingTalents'),
+      name: 'evaluationOfMunicipalLeadingTalents',
+      meta: { title: '市领军人才评审', icon: 'folder' },
+      children: [
+        {
+          path: 'enterpriseInnovationTeam',
+          component: () => import('@/views/synergyPlatform/evaluationOfMunicipalLeadingTalents/enterpriseInnovationTeam'),
+          name: 'enterpriseInnovationTeam',
+          meta: { title: '企业创新团队', icon: 'spot' }
+        }
+      ]
     }
   ]
 }
