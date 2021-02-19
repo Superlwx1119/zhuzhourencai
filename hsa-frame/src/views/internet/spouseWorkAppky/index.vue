@@ -1,57 +1,39 @@
 <template>
   <div>
-    <!-- 家长基本信息 -->
-    <section class="layer layer-query">
-      <div class="box">
-        <div class="box-header handle">
-          <span class="box-title">人才基本信息（无需填写）</span>
-        </div>
-        <div class="box-body no-padding-top tableItem">
-          <table-item
-            :item-datas="applicantData"
-            :form-datas="applicantForm"
-          />
+    <div class="box">
+      <div class="box-header handle">
+        <span class="box-title">人才基本信息（无需填写）</span>
+      </div>
+      <div class="box-body no-padding-top tableItem">
+        <table-item
+          :item-datas="applicantData"
+          :form-datas="applicantForm"
+        />
+      </div>
+      <div class="box-header handle">
+        <span class="box-title">人才其他信息</span>
+      </div>
+      <div class="box-body no-padding-top">
+        <FormItems :items-datas="itemDatas" :form-datas="itemForm" :is-grid="false" />
+      </div>
+      <div class="box-header handle">
+        <span class="box-title">配偶信息</span>
+      </div>
+      <div class="box-body no-padding-top">
+        <FormItems :items-datas="otherDatas" :form-datas="otherForm" :is-grid="false" />
+      </div>
+      <div class="box-header handle">
+        <span class="box-title">业务附件</span>
+      </div>
+      <div class="box-body no-padding-top">
+        <div>上传列表</div>
+        <div class="groupBtns">
+          <MyButton type="submit" />
+          <MyButton type="save" />
+          <MyButton type="close" />
         </div>
       </div>
-    </section>
-    <!-- 人才其他信息 -->
-    <section class="layer layer-query">
-      <div class="box">
-        <div class="box-header handle">
-          <span class="box-title">人才其他信息</span>
-        </div>
-        <div class="box-body no-padding-top">
-          <FormItems :items-datas="itemDatas" :form-datas="itemForm" :is-grid="false" />
-        </div>
-      </div>
-    </section>
-    <!-- 配偶信息 -->
-    <section class="layer layer-query">
-      <div class="box">
-        <div class="box-header handle">
-          <span class="box-title">配偶信息</span>
-        </div>
-        <div class="box-body no-padding-top">
-          <FormItems :items-datas="otherDatas" :form-datas="otherForm" :is-grid="false" />
-        </div>
-      </div>
-    </section>
-    <!-- 业务附件 -->
-    <section class="layer layer-query">
-      <div class="box">
-        <div class="box-header handle">
-          <span class="box-title">业务附件</span>
-        </div>
-        <div class="box-body no-padding-top">
-          <div>上传列表</div>
-          <div class="groupBtns">
-            <MyButton type="submit" />
-            <MyButton type="save" />
-            <MyButton type="close" />
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   </div>
 </template>
 <script>
@@ -137,11 +119,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.tableItem {
-  padding-bottom: 16px !important;
-}
 .groupBtns {
-  margin: 50px 16px;
+  margin: 50px 16px 0 16px;
   padding-bottom: 30px;
   text-align: right;
 }
