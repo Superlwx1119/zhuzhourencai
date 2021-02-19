@@ -2,12 +2,12 @@
   <div class="dashboard-container">
     首页
     <div style="width: 400px; height: 400px;">
-      <img
+      <!-- <img
         width="100%"
         height="100%"
         :src="imgUrl"
         alt=""
-      >
+      > -->
     </div>
   </div>
 </template>

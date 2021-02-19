@@ -8,7 +8,6 @@ import Layout from '@/layout'
 
 /* Router Modules */
 import QueryListManage from './modules/QueryListManage' // 报表查询模块
-import admission from './modules/admission'
 import internet from './modules/internet' // 互联网端
 import synergyPlatform from './modules/synergyPlatform' // 协同平台
 
@@ -62,7 +61,6 @@ export const constantRoutes = [
       }
     ]
   },
-  ...admission,
   QueryListManage,
   internet,
   synergyPlatform

@@ -1,5 +1,6 @@
 //  协同平台
 import Layout from '@/layout'
+import leadingTalents from './leadingTalents/index'
 export default {
   path: '/synergyPlatform',
   component: Layout,
@@ -29,6 +30,7 @@ export default {
           meta: { title: '企业创新团队', icon: 'spot' }
         }
       ]
-    }
+    },
+    leadingTalents
   ]
 }
