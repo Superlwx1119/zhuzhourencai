@@ -27,6 +27,7 @@
         <form-items
           ref="ruleFrom"
           :model="searchForm"
+          :is-grid="false"
           :items-datas="itemDatas"
           :form-datas="searchForm"
           label-width="130px"
@@ -40,6 +41,7 @@
       <div class="box-body ts">
         <form-items
           ref="ruleFrom"
+          :is-grid="false"
           :model="searchForm"
           :items-datas="itemDatas1"
           :form-datas="searchForm"
@@ -54,6 +56,7 @@
       <div class="box-body ts">
         <form-items
           ref="ruleFrom"
+          :is-grid="false"
           :model="searchForm"
           :items-datas="itemDatas2"
           :form-datas="searchForm"
@@ -68,6 +71,7 @@
       <div class="box-body ts">
         <form-items
           ref="ruleFrom"
+          :is-grid="false"
           :model="searchForm"
           :items-datas="itemDatas3"
           :form-datas="searchForm"
@@ -80,22 +84,24 @@
         <span class="box-title">申报人近 5 年代表性业绩成果</span>
       </div>
       <div class="box-body ts">
-        <ul class="textLine">
-          <li>
-            <span>1、业绩成果形式不限，包括科研项目/课题、论文或专著、科技奖励、专利及成果转化、新产品（含新品种）/新装置（装备）/新工艺/新材料开发、行业标准制定、科技咨询与服务实绩等;</span>
-          </li>
-          <li>
-            <span>2、业绩成果基本信息按格式要求填写；</span>
-          </li>
-          <li>
-            <span>3、业绩成果的创新价值或经济、社会效益描述要求内容详实具体、数据精准；</span>
-          </li>
-          <li>
-            <span>4、所有的业绩成果等均须有相应附件做支撑，附件缺项漏项的成果不予认可;</span>
-          </li>
-        </ul>
-        <div class="footer">
-          <my-button title="增加业绩成果信息" style="margin-left: 10px;" type="primary" @click="iniSearch" />
+        <div class="flexContent">
+          <ul class="textLine">
+            <li>
+              <span>1、业绩成果形式不限，包括科研项目/课题、论文或专著、科技奖励、专利及成果转化、新产品（含新品种）/新装置（装备）/新工艺/新材料开发、行业标准制定、科技咨询与服务实绩等;</span>
+            </li>
+            <li>
+              <span>2、业绩成果基本信息按格式要求填写；</span>
+            </li>
+            <li>
+              <span>3、业绩成果的创新价值或经济、社会效益描述要求内容详实具体、数据精准；</span>
+            </li>
+            <li>
+              <span>4、所有的业绩成果等均须有相应附件做支撑，附件缺项漏项的成果不予认可;</span>
+            </li>
+          </ul>
+          <div class="footer">
+            <my-button title="增加业绩成果信息" style="margin-left: 10px;margin-bottom:10px;" type="primary" @click="iniSearch" />
+          </div>
         </div>
         <my-table-view
           :columns="tableColumns"
@@ -112,6 +118,7 @@
       <div class="box-body ts">
         <form-items
           ref="ruleFrom"
+          :is-grid="false"
           :model="searchForm"
           :items-datas="itemDatas3"
           :form-datas="searchForm"
@@ -126,6 +133,7 @@
       <div class="box-body ts">
         <form-items
           ref="ruleFrom"
+          :is-grid="false"
           :model="searchForm"
           :items-datas="itemDatas3"
           :form-datas="searchForm"
@@ -204,6 +212,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.flexContent{
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-end;
+}
+/deep/ .box+.box{
+    margin-top:0px !important;
+}
  .avatar-uploader .el-upload {
     border: 1px dashed #d9d9d9;
     border-radius: 6px;
@@ -246,7 +262,7 @@ export default {
   // }
   .textLine{
       width: 80%;
-      background-color: #ccc;
+      background-color: #fff;
       padding: 10px;
         li{
      list-style: none;
