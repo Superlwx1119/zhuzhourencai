@@ -35,7 +35,23 @@ export default {
         { label: '电子邮箱', prop: '电子邮箱', type: 'input' }
       ],
       itemDatas3: [
-        { label: '', prop: '', type: 'textarea', rows: 1 }
+        { label: '', prop: '', type: 'textarea', autosize: true }
+      ],
+      tableColumns: [
+        { label: '序号', type: 'index' },
+        { label: '业绩成果形式', prop: '业绩成果形式', sortable: false, align: 'center', overflow: true, width: '120px' },
+        { label: '基本信息', prop: '基本信息', sortable: false, align: 'center', overflow: true, width: '120px' },
+        { label: '本人排名/总人数', prop: '本人排名', sortable: false, align: 'center' },
+        { label: '创新价值或经济、社会效益', prop: '创新价值或经济', sortable: false, align: 'center' },
+        { type: 'operation', label: '操作', fixed: 'right', width: '120px' }
+      ],
+      tableColumns1: [
+        { label: '序号', type: 'index' },
+        { label: '附件', prop: '附件', sortable: false, align: 'center', overflow: true, width: '120px' },
+        { label: '材料名称', prop: '材料名称', sortable: false, align: 'center', overflow: true, width: '120px' },
+        { label: '是否必须', prop: '本人排名', sortable: false, align: 'center' },
+        { label: '模板下载', prop: '模板下载', sortable: false, align: 'center' },
+        { type: 'operation', label: '操作', fixed: 'right', width: '120px' }
       ]
     }
   }
