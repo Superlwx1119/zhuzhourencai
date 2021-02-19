@@ -166,7 +166,7 @@
 
 <script>
 import BottomFixed from '@/views/components/BottomFixed/index'
-import itemDatas from '../mixin/itemDatas'
+import itemDatas from '../../mixin/itemDatas'
 export default {
   components: {
     BottomFixed
