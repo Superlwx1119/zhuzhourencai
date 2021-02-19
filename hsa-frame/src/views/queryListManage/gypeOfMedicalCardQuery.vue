@@ -52,6 +52,8 @@ export default {
     }
   },
   mounted() {
+    console.log(3333333333333)
+
     this.search()
   },
   methods: {
