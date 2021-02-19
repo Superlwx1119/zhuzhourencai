@@ -26,6 +26,7 @@
         </div>
         <form-items
           ref="ruleFrom"
+          :rules="rules"
           :model="searchForm"
           :is-grid="false"
           :items-datas="itemDatas"
@@ -42,6 +43,7 @@
         <form-items
           ref="ruleFrom"
           :is-grid="false"
+          :rules="rules1"
           :model="searchForm"
           :items-datas="itemDatas1"
           :form-datas="searchForm"
@@ -58,6 +60,7 @@
           ref="ruleFrom"
           :is-grid="false"
           :model="searchForm"
+          :rules="rules2"
           :items-datas="itemDatas2"
           :form-datas="searchForm"
           label-width="130px"
@@ -261,6 +264,7 @@ export default {
   // }
   // }
   .textLine{
+    border: 1px solid #ccc;
       width: 80%;
       background-color: #fff;
       padding: 10px;

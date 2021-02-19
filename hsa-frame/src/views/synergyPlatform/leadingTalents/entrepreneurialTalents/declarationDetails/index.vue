@@ -1,4 +1,5 @@
 <template>
+  <!-- 创业类人才 -->
   <div>
     <div class="box">
       <div class="box-header">
@@ -36,9 +37,9 @@
       </div>
     </div>
     <div class="box">
-      <div class="box-header">
+      <!-- <div class="box-header">
         <span class="box-title">详细信息</span>
-      </div>
+      </div> -->
       <div class="box-body ts">
         <form-items
           ref="ruleFrom"
@@ -52,16 +53,16 @@
       </div>
     </div>
     <div class="box">
-      <div class="box-header">
+      <!-- <div class="box-header">
         <span class="box-title">工作单位信息</span>
-      </div>
+      </div> -->
       <div class="box-body ts">
         <form-items
           ref="ruleFrom"
           :is-grid="false"
           :model="searchForm"
           :rules="rules2"
-          :items-datas="itemDatas2"
+          :items-datas="itemDatas22"
           :form-datas="searchForm"
           label-width="130px"
         />
@@ -84,30 +85,20 @@
     </div>
     <div class="box">
       <div class="box-header">
-        <span class="box-title">申报人近 5 年代表性业绩成果</span>
+        <span class="box-title"> 创办企业基本信息</span>
       </div>
       <div class="box-body ts">
-        <div class="flexContent">
-          <ul class="textLine">
-            <li>
-              <span>1、业绩成果形式不限，包括科研项目/课题、论文或专著、科技奖励、专利及成果转化、新产品（含新品种）/新装置（装备）/新工艺/新材料开发、行业标准制定、科技咨询与服务实绩等;</span>
-            </li>
-            <li>
-              <span>2、业绩成果基本信息按格式要求填写；</span>
-            </li>
-            <li>
-              <span>3、业绩成果的创新价值或经济、社会效益描述要求内容详实具体、数据精准；</span>
-            </li>
-            <li>
-              <span>4、所有的业绩成果等均须有相应附件做支撑，附件缺项漏项的成果不予认可;</span>
-            </li>
-          </ul>
-          <div class="footer">
-            <my-button title="增加业绩成果信息" style="margin-left: 10px;margin-bottom:10px;" type="primary" @click="iniSearch" />
-          </div>
-        </div>
+        <form-items
+          ref="ruleFrom"
+          :rules="rules"
+          :model="searchForm"
+          :is-grid="false"
+          :items-datas="itemDatas4"
+          :form-datas="searchForm"
+          label-width="130px"
+        />
         <my-table-view
-          :columns="tableColumns"
+          :columns="tableColumns2"
           :data="tableData"
           :multiple-selection.sync="multipleSelection"
           height="357px"
@@ -116,7 +107,7 @@
     </div>
     <div class="box">
       <div class="box-header">
-        <span class="box-title">申报人自我评价</span>
+        <span class="box-title">主要创业情况</span>
       </div>
       <div class="box-body ts">
         <form-items
@@ -131,7 +122,7 @@
     </div>
     <div class="box">
       <div class="box-header">
-        <span class="box-title">支撑保障</span>
+        <span class="box-title">创业项目及市场前景</span>
       </div>
       <div class="box-body ts">
         <form-items
@@ -146,7 +137,7 @@
     </div>
     <div class="box">
       <div class="box-header">
-        <span class="box-title">申报人近 5 年代表性业绩成果</span>
+        <span class="box-title">业务附件</span>
       </div>
       <div class="box-body ts">
         <my-table-view

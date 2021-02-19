@@ -1,4 +1,5 @@
 <template>
+  <!-- 创新类人才 -->
   <div>
     <div class="box">
       <div class="box-header">
@@ -146,7 +147,7 @@
     </div>
     <div class="box">
       <div class="box-header">
-        <span class="box-title">申报人近 5 年代表性业绩成果</span>
+        <span class="box-title">业务附件</span>
       </div>
       <div class="box-body ts">
         <my-table-view
