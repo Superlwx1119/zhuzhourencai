@@ -27,3 +27,23 @@ export const fourColumns = [
   { label: '入选时间', prop: 'xxx' },
   { type: 'operation', label: '操作' }
 ]
+export const eduColumns = [
+  { label: '起始年月', prop: 'x' },
+  { label: '截止年月', prop: 'xx' },
+  { label: '学位', prop: 'xxx' },
+  { label: '国家', prop: 'xxx' },
+  { label: '院校（所）', prop: 'xxx' },
+  { label: '专业', prop: 'xxx' },
+  { label: '培养方式', prop: 'xxx' },
+  { type: 'operation', label: '操作' }
+]
+export const workColumns = [
+  { label: '起始年月', prop: 'x' },
+  { label: '截止年月', prop: 'xx' },
+  { label: '专业技术职务', prop: 'xxx' },
+  { label: '国家', prop: 'xxx' },
+  { label: '单位', prop: 'xxx' },
+  { label: '行政职务', prop: 'xxx' },
+  { label: '岗位性质', prop: 'xxx' },
+  { type: 'operation', label: '操作' }
+]

@@ -2,14 +2,14 @@
   <form-dialog
     class="audit-dialog-wrapper"
     :title="dialogTitle"
-    :is-show="secDialogVisible"
+    :is-show="firstDialogVisible"
     size="big"
     width="1200px"
     @update:isShow="isShow"
   >
     <div class="box" style="height:auto">
       <div class="box-header">
-        <span class="box-title">团队负责人基本信息</span>
+        <span class="box-title">团队核心成员基本信息</span>
       </div>
       <div class="box-body">
         <el-row :gutter="12">
@@ -39,36 +39,6 @@
           </el-col>
         </el-row>
       </div>
-      <!-- 团队负责人教育经历（按时间顺序从大学填起，海外机构请注明国别/地区） -->
-      <div class="box-header handle">
-        <span class="box-title">团队负责人教育经历（按时间顺序从大学填起，海外机构请注明国别/地区）</span>
-        <div slot="title-btns" class="box-tools">
-          <my-button type="primary" title="增加项目情况信息" @click="addProjectInfo" />
-        </div>
-      </div>
-      <div class="box-body">
-        <my-table-view ref="table" v-loading="loading" :columns="columns" :data="tableData" :height="300">
-          <template slot="operation" slot-scope="scope">
-            <my-button icon="edit" @click="editRow(scope.row)" />
-            <my-button icon="delete" @click="deleteRow(scope.row)" />
-          </template>
-        </my-table-view>
-      </div>
-      <!-- 团队负责人工作经历（兼职请注明，海外工作经历的职位用英文） -->
-      <div class="box-header handle">
-        <span class="box-title">团队负责人工作经历（兼职请注明，海外工作经历的职位用英文）</span>
-        <div slot="title-btns" class="box-tools">
-          <my-button type="primary" title="增加工作经历信息" @click="addWorkInfo" />
-        </div>
-      </div>
-      <div class="box-body">
-        <my-table-view ref="table" v-loading="loading1" :columns="columns1" :data="tableData1" :height="300">
-          <template slot="operation" slot-scope="scope">
-            <my-button icon="edit" @click="editRow(scope.row)" />
-            <my-button icon="delete" @click="deleteRow(scope.row)" />
-          </template>
-        </my-table-view>
-      </div>
     </div>
     <span slot="footer" class="dialog-footer">
       <my-button type="close" @click="closeDialog" />
@@ -78,10 +48,9 @@
 </template>
 <script>
 import validator from '@/utils/el-validator.js'
-import { eduColumns, workColumns } from '../tableConfig'
 export default {
   model: {
-    prop: 'secDialogVisible',
+    prop: 'firstDialogVisible',
     event: 'closeAll'
   },
   props: {
@@ -89,15 +58,13 @@ export default {
       type: String,
       default: ''
     },
-    secDialogVisible: {
+    firstDialogVisible: {
       type: Boolean,
       default: false
     }
   },
   data() {
     return {
-      loading: false,
-      loading1: false,
       itemsDatas: [
         { label: '姓名', prop: 'name', type: 'input', span: 12 },
         { label: '性别', prop: 'sex', type: 'codeTable', codeKey: 'xxx', options: [], span: 12 },
@@ -137,18 +104,10 @@ export default {
         zgxw: [{ required: true, message: '请选择', trigger: 'change' }],
         phone: [{ validator: validator, required: true, regexp: 'phone', trigger: 'blur' }],
         email: [{ validator: validator, required: true, regexp: 'email', trigger: 'blur' }]
-      },
-      columns: eduColumns,
-      columns1: workColumns,
-      tableData: [{ x: 'xx' }],
-      tableData1: [{ x: 'xx' }]
+      }
     }
   },
   methods: {
-    // 增加教育经历信息
-    addProjectInfo() {},
-    // 增加工作经历信息
-    addWorkInfo() {},
     isShow(v) {
       this.$emit('closeAll', v)
     },

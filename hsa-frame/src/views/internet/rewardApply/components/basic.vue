@@ -53,7 +53,6 @@ export default {
         { label: '联系电话', prop: 'supdept', type: 'input', span: 12 },
         { label: '电子邮箱', prop: 'supdept', type: 'input', span: 12 },
         { label: '人才类别', prop: 'supdept', type: 'select', span: 12 }
-
       ],
       rules: {
         sex: [{ required: true, message: '请选择', trigger: 'change' }]
