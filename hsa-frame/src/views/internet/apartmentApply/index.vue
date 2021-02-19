@@ -1,110 +1,97 @@
 <template>
   <div>
-    <!-- 基本信息 -->
-    <section class="layer layer-query">
-      <div class="box">
-        <div class="box-header handle">
-          <span class="box-title">基本信息</span>
-        </div>
-        <div class="box-body no-padding-top tableItem">
-          <FormItems :items-datas="itemDatas" :form-datas="itemForm" :is-grid="false" />
-        </div>
+    <div class="box">
+      <div class="box-header handle">
+        <span class="box-title">基本信息</span>
       </div>
-    </section>
-    <!-- 申请人家庭成员情况 -->
-    <section class="layer layer-query">
-      <div class="box">
-        <div class="box-header handle">
-          <span class="box-title">申请人家庭成员情况</span>
-        </div>
-        <div class="box-body no-padding-top">
-          <my-table-view v-loading="loading" :columns="columns" :data="tableData" :is-configheader="false">
-            <template slot="cc1" slot-scope="scope">
-              <el-select v-model="scope.row.cc1" placeholder="请选择">
-                <el-option
-                  v-for="item in options_1"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value"
-                />
-              </el-select>
-            </template>
-            <template slot="cc2" slot-scope="scope">
-              <el-input v-model="scope.row.cc2" />
-            </template>
-            <template slot="cc3" slot-scope="scope">
-              <el-select v-model="scope.row.cc3" placeholder="请选择">
-                <el-option
-                  v-for="item in options_2"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value"
-                />
-              </el-select>
-            </template>
-            <template slot="cc4" slot-scope="scope">
-              <el-select v-model="scope.row.cc4" placeholder="请选择">
-                <el-option
-                  v-for="item in options_3"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value"
-                />
-              </el-select>
-            </template>
-            <template slot="cc5" slot-scope="scope">
-              <el-date-picker
-                v-model="scope.row.cc5"
-                type="date"
-                placeholder="选择日期"
+      <div class="box-body no-padding-top tableItem">
+        <FormItems :items-datas="itemDatas" :form-datas="itemForm" :is-grid="false" />
+      </div>
+      <div class="box-header handle">
+        <span class="box-title">申请人家庭成员情况</span>
+      </div>
+      <div class="box-body no-padding-top">
+        <my-table-view v-loading="loading" :columns="columns" :data="tableData" :is-configheader="false">
+          <template slot="cc1" slot-scope="scope">
+            <el-select v-model="scope.row.cc1" placeholder="请选择">
+              <el-option
+                v-for="item in options_1"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value"
               />
-            </template>
-            <template slot="cc6" slot-scope="scope">
-              <el-select v-model="scope.row.cc6" placeholder="请选择">
-                <el-option
-                  v-for="item in options_4"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value"
-                />
-              </el-select>
-            </template>
-            <template slot="cc7" slot-scope="scope">
-              <el-input v-model="scope.row.cc7" />
-            </template>
-            <template slot="cc8" slot-scope="scope">
-              <el-input v-model="scope.row.cc8" />
-            </template>
-            <template slot="cc9" slot-scope="scope">
-              <el-select v-model="scope.row.cc9" placeholder="请选择">
-                <el-option
-                  v-for="item in options_5"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value"
-                />
-              </el-select>
-            </template>
-          </my-table-view>
+            </el-select>
+          </template>
+          <template slot="cc2" slot-scope="scope">
+            <el-input v-model="scope.row.cc2" />
+          </template>
+          <template slot="cc3" slot-scope="scope">
+            <el-select v-model="scope.row.cc3" placeholder="请选择">
+              <el-option
+                v-for="item in options_2"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value"
+              />
+            </el-select>
+          </template>
+          <template slot="cc4" slot-scope="scope">
+            <el-select v-model="scope.row.cc4" placeholder="请选择">
+              <el-option
+                v-for="item in options_3"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value"
+              />
+            </el-select>
+          </template>
+          <template slot="cc5" slot-scope="scope">
+            <el-date-picker
+              v-model="scope.row.cc5"
+              type="date"
+              placeholder="选择日期"
+            />
+          </template>
+          <template slot="cc6" slot-scope="scope">
+            <el-select v-model="scope.row.cc6" placeholder="请选择">
+              <el-option
+                v-for="item in options_4"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value"
+              />
+            </el-select>
+          </template>
+          <template slot="cc7" slot-scope="scope">
+            <el-input v-model="scope.row.cc7" />
+          </template>
+          <template slot="cc8" slot-scope="scope">
+            <el-input v-model="scope.row.cc8" />
+          </template>
+          <template slot="cc9" slot-scope="scope">
+            <el-select v-model="scope.row.cc9" placeholder="请选择">
+              <el-option
+                v-for="item in options_5"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value"
+              />
+            </el-select>
+          </template>
+        </my-table-view>
+      </div>
+      <div class="box-header handle">
+        <span class="box-title">业务附件</span>
+      </div>
+      <div class="box-body no-padding-top">
+        <div>上传列表</div>
+        <div class="groupBtns">
+          <MyButton type="submit" />
+          <MyButton type="save" />
+          <MyButton type="close" />
         </div>
       </div>
-    </section>
-    <!-- 业务附件 -->
-    <section class="layer layer-query">
-      <div class="box">
-        <div class="box-header handle">
-          <span class="box-title">业务附件</span>
-        </div>
-        <div class="box-body no-padding-top">
-          <div>上传列表</div>
-          <div class="groupBtns">
-            <MyButton type="submit" />
-            <MyButton type="save" />
-            <MyButton type="close" />
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   </div>
 </template>
 <script>
@@ -178,7 +165,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .groupBtns {
-  margin: 50px 16px;
+  margin: 50px 16px 0 16px;
   padding-bottom: 30px;
   text-align: right;
 }
