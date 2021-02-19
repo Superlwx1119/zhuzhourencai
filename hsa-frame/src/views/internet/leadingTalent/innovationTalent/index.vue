@@ -21,7 +21,7 @@
           </el-upload>
         </el-col>
         <el-col :span="20">
-          <FormItems ref="ruleForm" :is-grid="false" :item-span="12" :model="baseForm" :items-datas="baseItems" :form-datas="baseForm" :rules="rules" />
+          <FormItems ref="ruleForm" :is-grid="false" :item-span="12" :model="baseForm" :items-datas="baseItems" :form-datas="baseForm" :rules="baseRules" />
         </el-col>
       </el-row>
       <div
@@ -30,14 +30,14 @@
       >
         <span class="box-title">详情信息</span>
       </div>
-      <FormItems ref="ruleForm" :is-grid="false" :model="detailForm" :items-datas="detailItems" :form-datas="detailForm" :rules="rules" />
+      <FormItems ref="ruleForm" :is-grid="false" :model="detailForm" :items-datas="detailItems" :form-datas="detailForm" :rules="detailRules" />
       <div
         slot="table-title"
         class="box-header handle"
       >
         <span class="box-title">工作单位信息</span>
       </div>
-      <FormItems ref="ruleForm" :is-grid="false" :model="workForm" :items-datas="workItems" :form-datas="workForm" :rules="rules" />
+      <FormItems ref="ruleForm" :is-grid="false" :model="workForm" :items-datas="workItems" :form-datas="workForm" :rules="workRules" />
       <div
         slot="table-title"
         class="box-header handle"
@@ -55,6 +55,7 @@
         :data="tableData"
         :columns="columns"
         :have-pagination="false"
+        style="height:300px"
       >
         <template slot="stpon" slot-scope="scope">
           {{ scope.row.stpon === '1' ? '集体' : '非集体' }}
@@ -80,7 +81,7 @@
 </template>
 
 <script>
-import { baseItems, detailItems, workItems, columns } from './formConfig'
+import { baseItems, detailItems, workItems, columns, baseRules, detailRules, workRules } from './formConfig'
 export default {
   name: 'InnovationTalent',
   data() {
@@ -96,7 +97,10 @@ export default {
       baseItems,
       detailItems,
       workItems,
+      baseRules,
       columns,
+      workRules,
+      detailRules,
       rules: {}
     }
   },
